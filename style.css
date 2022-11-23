@@ -264,11 +264,20 @@ h5:hover {
   }
 
   .nav_menu {
-    display: none;
+    position: absolute;
+    right: -100%;
+    opacity: 0;
   }
 
+  ul {
+  }
+
+  /* ul {
+    right: 100%;
+  } */
+
   .nav_menu_active {
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     display: block;
     flex-direction: column;
     position: fixed;
@@ -281,10 +290,12 @@ h5:hover {
     gap: 1rem;
     z-index: 1;
     padding-top: 9rem;
+    opacity: 1;
   }
 
-  ul li {
+  nav ul li {
     margin-left: 1.5rem;
     padding: 0.5rem;
+    color: var(--very-dark-blue);
   }
 }
