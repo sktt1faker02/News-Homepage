@@ -204,7 +204,7 @@ h5:hover {
   align-self: center;
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .hero_section {
     grid-template-columns: 1fr;
   }
@@ -218,9 +218,11 @@ h5:hover {
     max-width: unset;
   }
 
-  .nav_icon {
-    display: block;
-  }
+  /* .nav_icon_active {
+    position: fixed;
+    right: 1.5rem;
+    top: 3.5rem;
+  } */
   .hero_description {
     align-items: flex-start;
   }
@@ -237,16 +239,52 @@ h5:hover {
     gap: 2rem;
   }
 
+  nav {
+    position: relative;
+  }
+
+  .nav_icon {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* .nav_menu {
+    display: none;
+  } */
+
+  .bodyScrollDisable {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .nav_icon_active {
+    content: url("./assets/images/icon-menu-close.svg");
+  }
+
   .nav_menu {
+    display: none;
+  }
+
+  .nav_menu_active {
+    transition: 0.3s ease-in-out;
+    display: block;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     height: 100%;
     right: 0;
     top: 0;
     bottom: 0;
-    /* left: 0; */
-    width: 75vw;
+    width: 70vw;
     background-color: #fff;
     gap: 1rem;
+    z-index: 1;
+    padding-top: 9rem;
+  }
+
+  ul li {
+    margin-left: 1.5rem;
+    padding: 0.5rem;
   }
 }
